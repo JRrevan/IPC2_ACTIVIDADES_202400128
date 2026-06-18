@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "N2jO+LEpvxE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\river\\OneDrive\\Documentos\\GitHub\\IPC2_ACTIVIDADES_202400128\\actividad_11_julio\\ApiEstructurasDemo\\ApiEstructurasDemo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\river\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.8\\microsoft.aspnetcore.openapi.10.0.8.nupkg.sha512",
+    "C:\\Users\\river\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

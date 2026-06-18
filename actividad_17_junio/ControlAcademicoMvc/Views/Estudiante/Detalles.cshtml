@@ -1,0 +1,56 @@
+@model ControlAcademicoMvc.Models.Estudiante
+
+@{
+    ViewData["Title"] = "Detalles del Estudiante";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="mb-4">Detalles del Estudiante</h1>
+
+            @if (Model != null)
+            {
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@Model.Nombre</h5>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label"><strong>Carné:</strong></label>
+                                <p class="form-control-static">@Model.Carne</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label"><strong>Promedio:</strong></label>
+                                <p class="form-control-static">
+                                    <span class="badge @(Model.Promedio >= 3.5m ? "bg-success" : "bg-warning")">
+                                        @Model.Promedio.ToString("F2")
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info" role="alert">
+                            <strong>Validación:</strong> Este estudiante tiene un promedio @(Model.EsPromedioValido() ? "<strong class='text-success'>válido</strong>" : "<strong class='text-danger'>inválido</strong>")
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <a href="@Url.Action("Index", "Estudiante")" class="btn btn-secondary">
+                        Volver al Listado
+                    </a>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger" role="alert">
+                    El estudiante no fue encontrado.
+                </div>
+                <a href="@Url.Action("Index", "Estudiante")" class="btn btn-secondary">
+                    Volver al Listado
+                </a>
+            }
+        </div>
+    </div>
+</div>
